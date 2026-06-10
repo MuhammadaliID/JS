@@ -26,6 +26,7 @@ if (true) {
 }
 
 console.log(name); // Error
+![SCOPE](./Снимок%20экрана%202026-06-10%20171311.png)
 ---
 
 ## 🚀 Hoisting
