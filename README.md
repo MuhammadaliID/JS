@@ -1,33 +1,79 @@
-# 🚀 Cool Project
+# JavaScript: Scope, Hoisting и TDZ
 
-Добро пожаловать в мой проект!  
-Это современное приложение с простым интерфейсом и крутым дизайном.
+![JavaScript](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png)
 
----
+## 📌 Что изучается
 
-## 📸 Скриншоты
+В этом проекте рассматриваются три важные темы JavaScript:
 
-### Главный экран
-![Main Screen](https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80)
-
-### Интерфейс приложения
-![UI](https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1000&q=80)
-
-### Функции
-![Features](https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1000&q=80)
+- Scope (область видимости)
+- Hoisting (поднятие объявлений)
+- TDZ (Temporal Dead Zone)
 
 ---
 
-## ⚙️ Возможности
-- Быстрый и лёгкий интерфейс
-- Современный дизайн
-- Адаптация под телефон и ПК
-- Простое управление
+## 🔍 Scope (Область видимости)
+
+Scope определяет, где переменная доступна в коде.
+
+### Виды Scope:
+- Global Scope — доступна везде.
+- Function Scope — доступна внутри функции.
+- Block Scope — доступна внутри блока {}.
+
+if (true) {
+    let name = "Ali";
+}
+
+console.log(name); // Error
+---
+
+## 🚀 Hoisting
+
+JavaScript сначала читает код, а затем выполняет его.
+
+console.log(a);
+var a = 10;
+Результат:
+
+undefined
+Переменная существует, но значение ещё не присвоено.
 
 ---
 
-## 📦 Установка
+## ⛔️ TDZ (Temporal Dead Zone)
 
-`bash
-git clone https://github.com/yourname/cool-project.git
-cd cool-project
+TDZ — период между началом блока и объявлением переменной let или const.
+
+console.log(age);
+let age = 18;
+Результат:
+
+ReferenceError
+---
+
+## 📊 Сравнение
+
+| Тип | Hoisting | TDZ |
+|------|----------|-----|
+| var | Да | Нет |
+| let | Да | Да |
+| const | Да | Да |
+| function | Полностью | Нет |
+
+---
+
+## ✅ Лучшие практики
+
+- Используйте let и const.
+- Объявляйте переменные в начале области видимости.
+- Избегайте лишних глобальных переменных.
+- Используйте const по умолчанию.
+
+---
+
+## 📝 Итог
+
+- Scope определяет область доступа к переменным.
+- Hoisting поднимает объявления вверх.
+- TDZ защищает от использования переменных до их объявления.
